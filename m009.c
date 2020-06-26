@@ -27,7 +27,7 @@ void sort (int* vector, int n)
 {
 }
 
-#define USAGE "m009 <num1> <nun2> ... \n"
+#define USAGE "m009 <num1> <num2> ... \n"
 
 /* Do not edit this function. */
 

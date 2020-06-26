@@ -24,8 +24,20 @@
 
 int greatest (int a, int b, int c)
 {
-  return a;
-}
+  if ((a>b) && (a>c))
+  {
+    return a;
+  }
+  else
+    if (b>c)
+    {
+      return b;
+    }
+    else
+    {
+      return c;
+    }
+  }
 
 /* Do not edit this function. */
 
