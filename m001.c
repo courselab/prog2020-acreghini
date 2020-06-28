@@ -28,7 +28,8 @@ int greatest (int a, int b, int c)
   {
     return a;
   }
-  else /* como o primeiro não é o maior, compara o segundo e o terceiro          pra saber qual é  */
+  else
+  {
     if (b > c)
     {
       return b;
@@ -38,6 +39,8 @@ int greatest (int a, int b, int c)
       return c;
     }
   }
+}
+/* no else, como o primeiro não é o maior, compara o segundo e o terceiro pra saber qual é  */
 
 /* Do not edit this function. */
 
