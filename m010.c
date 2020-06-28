@@ -41,15 +41,12 @@ int day_of_week (int day, int month)
   
   tot_dias = tot_dias + day;
   tot_dias = tot_dias % 7;
-  printf("%d\n", tot_dias);
-  dia_na_semana = (tot_dias + 3) - 8;
-
-  if(dia_na_semana < 0)
+  dia_na_semana = tot_dias + 2;
+  
+  if(dia_na_semana > 6)
   {
-    dia_na_semana = dia_na_semana * -1;
+    dia_na_semana = dia_na_semana - 7;
   }
-  printf("xxx = %d\n", dia_na_semana);
-
   return dia_na_semana;
 }
 
