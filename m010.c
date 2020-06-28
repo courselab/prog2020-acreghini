@@ -41,9 +41,9 @@ int day_of_week (int day, int month)
   
   tot_dias = tot_dias + day;
   tot_dias = tot_dias % 7;
-  dia_na_semana = tot_dias + 2;
+  dia_na_semana = tot_dias + 2; //porque  o ano começou numa quarta
   
-  if(dia_na_semana > 6)
+  if(dia_na_semana > 6) //desconta 7 pra começar do 0 de novo
   {
     dia_na_semana = dia_na_semana - 7;
   }

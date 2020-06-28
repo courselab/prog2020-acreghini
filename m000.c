@@ -23,7 +23,7 @@
 
 /* Write the number 'n' in Roman numerals.*/
 
-int pitag (char c)
+int pitag (char c) //achar o padrão dos números dados às letras
 {
   int n;
 

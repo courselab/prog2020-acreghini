@@ -33,7 +33,7 @@ int lettercount (char *s)
 
   for (int i = 0; i <= strlen(s) ; i++ )
   {
-    if (((s[i] >= 'A') && (s[i] <= 'Z')) || ((s[i] >= 'a') && (s[i] <= 'z')))
+    if (((s[i] >= 'A') && (s[i] <= 'Z')) || ((s[i] >= 'a') && (s[i] <= 'z'))) //só conta se é letra
     {
       c++;
     }
@@ -42,6 +42,7 @@ int lettercount (char *s)
   return c;
 }
 
+/* no for, foi usado strlen e não o MAX porque havia "lixo" sendo guardado quando se ultrapassava o tamanho da string, o que levava a um resultado com caracteres estranhos seguindo o esperado */
 
 
 /* Do not edit this function. */

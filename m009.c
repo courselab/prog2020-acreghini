@@ -23,9 +23,9 @@
 
 /* Sort the first 'n' integers values in 'vector'. */
 
-void sort (int* vector, int n)
+void sort (int* vector, int n) //método bubblesort
 {
-  int aux = 0;
+  int aux = 0; //pra guardar e não perder ao trocar
 
  for (int a = 1; a < n; a++)
  {  

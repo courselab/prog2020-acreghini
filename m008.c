@@ -35,8 +35,7 @@ void lastname (char *s)
   int x = 0;
   int y = 0;
   
- 
-  strcpy (n, s);
+ strcpy (n, s);
 
   for (int i = 0; i < strlen(n); i++)
   {
@@ -46,9 +45,9 @@ void lastname (char *s)
     }
   }
 
-  for (int i = x + 1; i < strlen(n)-1; i++)
+  for (int i = x + 1; i < strlen(n) - 1; i++)
   {
-    if (n[i] >= 97)
+    if (n[i] >= 97) //começo das letras minúsculas
     {
       s[y++] = n[i] - 32;
     }
