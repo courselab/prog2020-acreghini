@@ -28,8 +28,12 @@
 
 void crossprod (int a[3], int b[3], int c[3])
 {
+  c[0] = a[1] * b[2] - a[2] * b[1];
+  c[1] = a[2] * b[0] - a[0] * b[2];
+  c[2] = a[0] * b[1] - a[1] * b[0];
 }
 
+/*usa o mesmo raciocínio do anterior. É como considerar a primeira linha com caracteres x, y e z. Ao final, obtêm-se essas letras acompanhadas de um número cada, que são os três números desejados, na ordem x y z. */
 
 
 /* Do not edit this function. */

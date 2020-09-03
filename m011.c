@@ -28,8 +28,28 @@
 
 int wordcount (char *filename)
 {
-  return 0;
+  FILE *arq = fopen (filename, "r");
+  int c;
+  int c2 = 0;
+  int count = 0;
+
+  while (! feof(arq)) //enquanto não acabar o texto
+  {
+    c = fgetc (arq);
+        
+    if ((c == 32) || (c == 13) || (c == 10))
+    { 
+      if (c2 != 10)  //estava contando a linha branca entre parágrafos   
+      {
+      count++ ;
+      }
+    }
+   c2 = c;
+  }
+return count;
 }
+
+/* 32 é espaço e 13 e 10 são de quebra de linha. Ressalta-se que só dá certo se o texto for finalizado com um espaço ou com um enter */
 
 /* Do not edit function main. */
 

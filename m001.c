@@ -24,8 +24,23 @@
 
 int greatest (int a, int b, int c)
 {
-  return a;
+  if ((a > b) && (a > c)) /* se o primeiro for o maior, já o retorna */
+  {
+    return a;
+  }
+  else
+  {
+    if (b > c)
+    {
+      return b;
+    }
+    else
+    {
+      return c;
+    }
+  }
 }
+/* no else, como o primeiro não é o maior, compara o segundo e o terceiro pra saber qual é  */
 
 /* Do not edit this function. */
 

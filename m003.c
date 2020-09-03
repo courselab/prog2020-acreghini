@@ -23,7 +23,24 @@
 
 int is_prime (int a)
 {
-  return 0;
+  if ((a % 2 == 0) && (a != 2) || (a == 1)) 
+  {
+    return 0;
+
+    /* se o número for par e não for o 2, ele não é primo. O 1 também não é primo, então retorna 0 */
+  }
+
+  for (int i = 2 ; i < a ; i++)
+  {
+    if (a % i == 0)
+    {
+      return 0;
+
+      /* se o número for divisível - resto 0 - por algum número maior que um e menor que ele, ele não é primo */
+    }
+  }
+
+  return 1;
 }
 
 #define USAGE "m003 <num>\n"

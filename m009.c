@@ -23,11 +23,25 @@
 
 /* Sort the first 'n' integers values in 'vector'. */
 
-void sort (int* vector, int n)
+void sort (int* vector, int n) //método bubblesort
 {
+  int aux = 0; //pra guardar e não perder ao trocar
+
+ for (int a = 1; a < n; a++)
+ {  
+		for (int b = n - 1; b >= a; b--)
+    { 
+      if (vector[b-1] > vector[b])
+      {
+				aux         = vector[b-1];
+				vector[b-1] = vector[b];
+				vector[b]   = aux;
+      }
+    }
+  }
 }
 
-#define USAGE "m009 <num1> <nun2> ... \n"
+#define USAGE "m009 <num1> <num2> ... \n"
 
 /* Do not edit this function. */
 

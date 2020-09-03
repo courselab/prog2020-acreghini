@@ -30,7 +30,24 @@ enum {sun, mon, tue, wed, thu, fri, sat};
 
 int day_of_week (int day, int month)
 {
-  return sun;
+  int dias_mes[12] = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+  int tot_dias = 0;
+  int dia_na_semana;
+
+  for (int i = 0; i < month - 1; i++)
+  {
+    tot_dias = tot_dias + dias_mes[i];
+  }
+  
+  tot_dias = tot_dias + day;
+  tot_dias = tot_dias % 7;
+  dia_na_semana = tot_dias + 2; //porque  o ano começou numa quarta
+  
+  if(dia_na_semana > 6) //desconta 7 pra começar do 0 de novo
+  {
+    dia_na_semana = dia_na_semana - 7;
+  }
+  return dia_na_semana;
 }
 
 /* Do not edit function main. */

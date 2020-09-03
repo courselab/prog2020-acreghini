@@ -21,6 +21,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define MAX 256
 
@@ -28,9 +29,20 @@
 
 int lettercount (char *s)
 {
-  return 0;
+  int c = 0;
+
+  for (int i = 0; i <= strlen(s) ; i++ )
+  {
+    if (((s[i] >= 'A') && (s[i] <= 'Z')) || ((s[i] >= 'a') && (s[i] <= 'z'))) //só conta se é letra
+    {
+      c++;
+    }
+  }
+
+  return c;
 }
 
+/* no for, foi usado strlen e não o MAX porque havia "lixo" sendo guardado quando se ultrapassava o tamanho da string, o que levava a um resultado com caracteres estranhos seguindo o esperado */
 
 
 /* Do not edit this function. */

@@ -27,6 +27,62 @@
 
 void sort (int *a, int *b, int *c)
 {
+  int menor; 
+  int meio;
+  int maior;
+  
+ /* essas variáveis foram criadas para guardar os valores,                 pois se substituir "por cima", eles são perdidos */
+
+ if ((*a < *b) && (*a < *c)) /* entra aqui se o primeiro foi o maior */
+ {
+   menor = *a;
+   
+   if (*b < *c)
+   {
+     meio = *b;
+     maior = *c;
+   }
+   else
+   {
+     meio = *c;
+     maior = *b;
+   }
+ }
+ else /* o primeiro não é o maior */
+ {
+  if (*b < *c)
+  {
+    menor = *b;
+    if (*a < *c)
+    {
+      meio = *a;
+      maior = *c;
+    }
+    else
+    {
+      meio = *c;
+      maior = *a;
+    }
+  }
+  else
+  {
+    menor = *c;
+    if (*a < *b)
+    {
+      meio = *a;
+      maior = *b;
+    }
+    else
+    {
+      meio = *b;
+      maior = *a;
+    }
+  }
+}
+*a = menor;
+*b = meio;
+*c = maior;
+
 }
 
 /* Do not edit this function. */

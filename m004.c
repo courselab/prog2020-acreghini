@@ -29,8 +29,20 @@
 
 int decimal (char *b)
 {
-  
-  return 0;
+  int n = strlen (b);
+  int dec = 0;
+  int pot = 1;
+
+  for (int i = n - 1; i >= 0; i--) /* começa no último porque não se                                         sabe quantos dígitos tem */
+  {
+    if (b[i] == '1') /* se for 0, não muda nada na soma */
+    {
+      dec = dec + pot;
+    }
+    pot = pot * 2;
+  }
+
+  return dec; 
 }
 
 #define USAGE "m004 <string>\n"
